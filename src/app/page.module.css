@@ -1,0 +1,361 @@
+.page {
+  min-height: 100vh;
+  padding: 48px 0 96px;
+  background: radial-gradient(circle at top, #11192b, #05060d 60%);
+  font-family: var(--font-geist-sans);
+  color: #f4f6ff;
+}
+
+.grid {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  gap: 32px;
+}
+
+.hero {
+  background: linear-gradient(135deg, rgba(68, 110, 255, 0.24), rgba(146, 84, 255, 0.18));
+  border: 1px solid rgba(120, 142, 255, 0.25);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 40px 120px rgba(40, 74, 160, 0.25);
+  display: grid;
+  gap: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 24, 44, 0.65);
+  border: 1px solid rgba(146, 168, 255, 0.42);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c7d3ff;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.hero p {
+  max-width: 640px;
+  font-size: 1.05rem;
+  color: rgba(236, 240, 255, 0.88);
+  line-height: 1.65;
+}
+
+.content {
+  display: grid;
+  gap: 32px;
+}
+
+.formSection {
+  background: rgba(9, 15, 30, 0.86);
+  border: 1px solid rgba(99, 133, 255, 0.28);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 30px 60px rgba(10, 18, 46, 0.45);
+  display: grid;
+  gap: 16px;
+}
+
+.formSection h2 {
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.sectionLead {
+  color: rgba(214, 220, 255, 0.7);
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  gap: 24px;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 10px;
+}
+
+.field span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(197, 210, 255, 0.7);
+}
+
+.field input,
+.field select,
+.field textarea {
+  background: rgba(14, 22, 45, 0.9);
+  border: 1px solid rgba(122, 150, 255, 0.25);
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: #e4e9ff;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: rgba(149, 173, 255, 0.55);
+  box-shadow: 0 0 0 4px rgba(120, 146, 255, 0.18);
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(11, 18, 36, 0.92);
+  border: 1px solid rgba(122, 150, 255, 0.25);
+  border-radius: 14px;
+  padding: 14px 16px;
+  color: rgba(214, 222, 255, 0.88);
+  font-size: 0.95rem;
+}
+
+.toggle input {
+  width: 18px;
+  height: 18px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.actions button {
+  border-radius: 999px;
+  border: none;
+  padding: 12px 22px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.actions button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.actions button[type="submit"] {
+  background: linear-gradient(135deg, #6d8bff, #915cff);
+  color: #0b1024;
+  box-shadow: 0 12px 30px rgba(102, 135, 255, 0.35);
+}
+
+.actions button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(110, 137, 255, 0.45);
+}
+
+.secondaryButton {
+  background: transparent;
+  border: 1px solid rgba(128, 156, 255, 0.32);
+  color: rgba(211, 218, 255, 0.88);
+}
+
+.secondaryButton:hover {
+  background: rgba(120, 146, 255, 0.1);
+}
+
+.results {
+  display: grid;
+  gap: 24px;
+}
+
+.section {
+  background: rgba(8, 13, 28, 0.92);
+  border: 1px solid rgba(120, 146, 255, 0.25);
+  border-radius: 22px;
+  padding: 28px;
+  display: grid;
+  gap: 18px;
+  box-shadow: inset 0 1px 0 rgba(180, 198, 255, 0.04);
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(224, 231, 255, 0.92);
+}
+
+.callout {
+  background: rgba(18, 26, 52, 0.9);
+  border: 1px solid rgba(120, 140, 255, 0.22);
+  border-radius: 18px;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.callout h3 {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(166, 184, 255, 0.8);
+}
+
+.callout p {
+  color: rgba(226, 232, 255, 0.92);
+  line-height: 1.6;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: rgba(210, 218, 255, 0.88);
+  padding-left: 18px;
+}
+
+.list li {
+  line-height: 1.6;
+}
+
+.gridTwo {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.cardGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: rgba(11, 18, 36, 0.9);
+  border: 1px solid rgba(106, 134, 255, 0.2);
+  border-radius: 20px;
+  padding: 22px;
+  display: grid;
+  gap: 16px;
+}
+
+.card header {
+  display: grid;
+  gap: 8px;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.card header p {
+  font-size: 0.95rem;
+  color: rgba(202, 212, 255, 0.76);
+  line-height: 1.6;
+}
+
+.cardSection {
+  display: grid;
+  gap: 6px;
+}
+
+.cardSection strong {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(160, 180, 255, 0.74);
+}
+
+.cardSection p {
+  font-size: 0.95rem;
+  color: rgba(214, 224, 255, 0.88);
+  line-height: 1.6;
+}
+
+.chipGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: rgba(59, 86, 206, 0.2);
+  border: 1px solid rgba(126, 150, 255, 0.35);
+  color: rgba(217, 224, 255, 0.92);
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.beatList {
+  display: grid;
+  gap: 8px;
+  padding-left: 18px;
+  list-style-type: decimal-leading-zero;
+  color: rgba(210, 220, 255, 0.88);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 24px;
+  }
+
+  .formSection,
+  .section {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 32px 0 64px;
+  }
+
+  .grid {
+    width: min(100%, calc(100% - 32px));
+  }
+
+  .badge {
+    font-size: 0.68rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions button,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
